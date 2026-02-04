@@ -1,0 +1,12 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Ram-Poptani/market-dashboard.git
+[submodule "LiveData"]
+	path = LiveData
+	url = https://github.com/Ram-Poptani/realtime-data-service.git
+[submodule "PastDataService"]
+	path = PastDataService
+	url = https://github.com/Ram-Poptani/historical-data-service.git
+[submodule "WebConsumer"]
+	path = WebConsumer
+	url = https://github.com/Ram-Poptani/data-aggregator.git
