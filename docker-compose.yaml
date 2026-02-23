@@ -1,0 +1,23 @@
+services:
+  web-consumer:
+    build: ./WebConsumer
+    env_file: ./WebConsumer/.env
+    ports:
+      - "8082:8082"
+  
+  live-data:
+    build: ./LiveData
+    env_file: ./LiveData/.env
+    ports:
+      - "8080:8080"
+
+  past-data-service:
+    build: ./PastDataService
+    env_file: ./PastDataService/.env
+    ports:
+      - "8081:8081"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
