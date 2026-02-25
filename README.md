@@ -6,38 +6,7 @@ A real-time cryptocurrency market data pipeline built with a **microservices arc
 
 ## Architecture Overview
 
-```
-Binance Futures WebSocket API
-              │
-              ▼
-     ┌─────────────────┐
-     │   WebConsumer    │  (Port 8082)
-     │ Ingests trades,  │
-     │ publishes to MQ  │
-     └────────┬────────┘
-              │
-    FanoutExchange: binance.trade.exchange
-              │
-     ┌────────┴────────┐
-     ▼                 ▼
-┌──────────┐    ┌────────────────┐
-│ LiveData │    │ PastDataService│
-│ (8080)   │    │    (8081)      │
-└────┬─────┘    └───────┬────────┘
-     │                  │
-  WebSocket        REST API
-  (real-time       (historical
-   candles)         candles)
-     │                  │
-     └────────┬─────────┘
-              ▼
-   ┌─────────────────────┐
-   │   React Frontend    │  (Port 5173)
-   │  TradingView Charts │
-   └─────────────────────┘
-
-Observability: Prometheus (9090) → Grafana (3000)
-```
+![Architecture Diagram](assets/arch.png)
 
 ---
 
