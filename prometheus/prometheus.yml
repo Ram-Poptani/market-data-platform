@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 1s
+
+scrape_configs:
+  - job_name: 'live-data'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['live-data:8080']
+
+  - job_name: 'past-data-service'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['past-data-service:8081']
+
+  - job_name: 'web-consumer'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['web-consumer:8082']
