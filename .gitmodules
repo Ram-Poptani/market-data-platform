@@ -10,3 +10,6 @@
 [submodule "WebConsumer"]
 	path = WebConsumer
 	url = https://github.com/Ram-Poptani/data-aggregator.git
+[submodule "OrderBookService"]
+	path = OrderBookService
+	url = https://github.com/Ram-Poptani/OrderBookService.git
