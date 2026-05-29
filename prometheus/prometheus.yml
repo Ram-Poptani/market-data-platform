@@ -16,3 +16,8 @@ scrape_configs:
     metrics_path: /actuator/prometheus
     static_configs:
       - targets: ['web-consumer:8082']
+
+  - job_name: 'order-book-service'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['order-book-service:8083']
